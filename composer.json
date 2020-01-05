@@ -1,13 +1,14 @@
 {
     "name": "laravelha/support",
     "description": "Laravelha Support",
+    "keywords": ["Laravelha", "Laravel", "Support"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Pedro Augusto",
             "email": "pams.pedro@gmail.com"
         }
     ],
-    "keywords": ["Laravelha", "Laravel", "Support"],
     "require": {
         "illuminate/support": "^6.0",
         "yajra/laravel-datatables-oracle": "9.7.2"
