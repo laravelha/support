@@ -1,0 +1,20 @@
+{
+    "name": "laravelha/support",
+    "description": "Laravelha Support",
+    "authors": [
+        {
+            "name": "Pedro Augusto",
+            "email": "pams.pedro@gmail.com"
+        }
+    ],
+    "keywords": ["Laravelha", "Laravel", "Support"],
+    "require": {
+        "illuminate/support": "^6.0",
+        "yajra/laravel-datatables-oracle": "9.7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravelha\\Support\\": "src/"
+        }
+    }
+}
