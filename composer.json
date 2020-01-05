@@ -10,8 +10,7 @@
         }
     ],
     "require": {
-        "illuminate/support": "^6.0",
-        "yajra/laravel-datatables-oracle": "9.7.2"
+        "illuminate/support": "^6.0"
     },
     "autoload": {
         "psr-4": {
