@@ -24,10 +24,10 @@ trait Tableable
     /**
      * Get datatable
      *
+     * @param string $routePrefix
      * @return JsonResponse
-     * @throws Exception
      */
-    public static function getDatatable(): JsonResponse
+    public static function getDatatable(string $routePrefix = ''): JsonResponse
     {
         $columnsCollection = collect(static::getColumns());
 
@@ -45,8 +45,8 @@ trait Tableable
         $dataTable = Datatables::of($list);
 
         foreach ($linkables as $linkable) {
-            $dataTable->editColumn($linkable, function ($item) use ($linkable) {
-                return '<a href="'.route(static::getRouteName().'.show', [static::getObjectName() => $item]).'">'.$item->$linkable.'</a>';
+            $dataTable->editColumn($linkable, function ($item) use ($linkable, $routePrefix) {
+                return '<a href="'.route($routePrefix.static::getRouteName().'.show', [static::getObjectName() => $item]).'">'.$item->$linkable.'</a>';
             });
         }
 
