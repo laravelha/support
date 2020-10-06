@@ -122,12 +122,17 @@ query: only=field1;field2;field3...
 ```
 2. Use `?search` with key and value to apply where or whereHas
 ```
-query: search=key:value
+query: ?search=key:value,key2:value2
 
-model: 
-public static function searchable() {
-    'key' => 'operator',
-}
+class MyModel extends Model {
+    public static function searchable() {
+        return [
+                'key' => 'operator',
+                'key2' => 'operator',
+               ];
+    }
+    // ...model
+} 
 
 ```
 > define searchable method on model is needed and relationships are identified by dot relation.column
