@@ -140,9 +140,9 @@ class MyModel extends Model {
 ```
 query: field1:operator1
 ```
-4. Use `?order` to sort results
+4. Use `?sort` to sort results
 ```
-query: field:direction
+query: ?sort=field:direction;field2:direction
 ```
 5. Use `?with` to load relation data separated by commas
 ```
